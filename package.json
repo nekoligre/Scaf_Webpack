@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "main": "index.js",
   "repository": "https://github.com/nekoligre/Scaf_Webpack.git",
-  "author": "Alberto gonzález novella <alberto.gonzalez@gft.com>",
   "author": "Juan Pedro Martínez <juanpedro.martinez@gft.com>",
   "license": "MIT",
   "private": true,
@@ -12,14 +11,16 @@
   },
   "devDependencies": {
     "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "nodemon": "^1.17.3",
-    "pug-loader": "^2.4.0",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15",
+    "babel-preset-env": "^1.6.1",
     "chalk": "^2.4.0",
     "express": "^4.16.3",
-    "pug": "2.0.3"
+    "nodemon": "^1.17.3",
+    "pug": "2.0.3",
+    "pug-loader": "^2.4.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   }
 }
