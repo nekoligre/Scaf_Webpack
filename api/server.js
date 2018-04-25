@@ -18,4 +18,4 @@ api.listen(8000, () => {
 });
 
 /** ROUTES */
-myRoute(api, '/myRoute', './api/fixtures/myRoute.json');
+myRoute(api, '/hola', './api/fixtures/myRoute.json');
