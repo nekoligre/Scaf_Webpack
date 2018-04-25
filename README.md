@@ -1,2 +1,2 @@
 # Scaf_Webpack
-Basic scaffolding for webpack 
+Angular basic scaffolding with WEBPACK
