@@ -6,7 +6,12 @@
   "author": "Juan Pedro Martínez <juanpedro.martinez@gft.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "api": "nodemon ./api/server.js --exec babel-node --presets babel-preset-env"
+  },
   "devDependencies": {
+    "chalk": "^2.4.0",
+    "express": "^4.16.3",
     "nodemon": "^1.17.3"
   }
 }
