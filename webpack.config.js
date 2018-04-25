@@ -32,7 +32,12 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
-      }
+      },
+      {
+          test: /\.pug$/,
+          include: path.join(__dirname, 'src'),
+          loaders: [ 'pug-loader' ]
+      },
     ]
   },
   devtool: 'source-map',
