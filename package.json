@@ -6,6 +6,9 @@
   "author": "Juan Pedro Martínez <juanpedro.martinez@gft.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "api": "nodemon ./api/server.js --exec babel-node --presets babel-preset-env"
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
@@ -13,7 +16,8 @@
     "nodemon": "^1.17.3",
     "pug-loader": "^2.4.0",
     "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
-    
+    "webpack-cli": "^2.0.15",
+    "chalk": "^2.4.0",
+    "express": "^4.16.3"
   }
 }
