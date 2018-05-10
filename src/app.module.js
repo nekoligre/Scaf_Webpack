@@ -1,4 +1,6 @@
-console.log('pepito');
+import angular from 'angular';
 
-require("./hola.pug");
-require("./main.scss")
+import myComponent from './components/myComponent.component';
+
+export default angular.module('myApp', [])
+  .component('myComponent', myComponent);
