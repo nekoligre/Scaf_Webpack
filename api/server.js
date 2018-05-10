@@ -11,9 +11,9 @@ api.use((req, res, next) => {
   next();
 });
 
-api.listen(8000, () => {
+api.listen(8080, () => {
   log(chalk.blue('------------------------------------------'));
-  log(chalk.blue('Listening on port ') + chalk.bold.cyan(8000));
+  log(chalk.blue('Listening on port ') + chalk.bold.cyan(8080));
   log(chalk.blue('------------------------------------------'));
 });
 
