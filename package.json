@@ -9,7 +9,7 @@
   "scripts": {
     "api": "nodemon ./api/server.js --exec babel-node --presets babel-preset-env",
     "start": "concurrently \"webpack --config=webpack.dev.js  --watch\"  \"webpack-dev-server\"  ",
-    "start-build": "webpack --config=webpack.prod.js"
+    "build": "webpack --config=webpack.dev.js --watch"
   },
   "devDependencies": {
     "babel": "^6.23.0",
