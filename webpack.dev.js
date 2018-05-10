@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.pug$/, loader: 'pug-loader', include: path.join(__dirname, '/src') },
+      { test: /\.pug$/, loaders: ['html-loader', 'pug-html-loader'] },
       { test: /\.sass$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] }
     ]
   },

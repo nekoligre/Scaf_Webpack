@@ -1,10 +1,10 @@
-
+const myComponentTemplate = require('./myComponent.template.pug');
 const myComponentCtrl = () => {};
 
 module.exports = {
   bindings: {
     label: '='
   },
-  template: '',
+  template: myComponentTemplate,
   controller: myComponentCtrl
 };
