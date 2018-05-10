@@ -2,3 +2,5 @@
 /dist/*
 yarn.lock
 yarn-error.log
+/build
+/npm-debug-log
