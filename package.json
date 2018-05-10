@@ -9,6 +9,7 @@
   "scripts": {
     "api": "nodemon ./api/server.js --exec babel-node --presets babel-preset-env",
     "start": "concurrently \"webpack --config=webpack.dev.js  --watch\"  \"webpack-dev-server\"  ",
+    "build-dev": "webpack --config=webpack.dev.js --watch",
     "build": "webpack --optimize-dedupe --optimize-occurrence-order --optimize-minimize --config=webpack.prod.js"
   },
   "devDependencies": {

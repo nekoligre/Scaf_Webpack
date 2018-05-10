@@ -5,6 +5,6 @@ module.exports = {
   bindings: {
     label: '='
   },
-  template: require('./myComponent.template.pug'),
+  template: '',
   controller: myComponentCtrl
 };
