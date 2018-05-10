@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "repository": "https://github.com/nekoligre/Scaf_Webpack.git",
-  "author": "Juan Pedro Martínez <juanpedro.martinez@gft.com>",
+  "author": "alberto gozalez novella <alberto.gonzalez@gft.com> Juan Pedro Martínez <juanpedro.martinez@gft.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
