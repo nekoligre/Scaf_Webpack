@@ -8,9 +8,9 @@ let fileLoaderOptions = {
 };
 
 module.exports  =  {
-   entry:  {
-    app:  path.join(__dirname,  './src/app.module.js'),
-    vendor:  ['angular']
+  entry:  {
+    vendor:  ['angular'],
+    app:  path.join(__dirname,  './src/app.module.js')
   },
   output:  {
     filename:  '[name].bundle.js',
