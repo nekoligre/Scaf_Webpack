@@ -9,8 +9,8 @@
   "scripts": {
     "dev-client": "webpack-dev-server --port 3000 --open",
     "dev-server": "nodemon ./api/server.js localhost 8080 --ignore './src'",
-    "build-dev" : "webpack --mode=none --config=webpack.dev.js",
-    "build-prod" : "webpack --mode=production --config=webpack.prod.js",
+    "build-dev": "webpack --mode=none --config=webpack.dev.js",
+    "build-prod": "webpack --mode=production --config=webpack.prod.js",
     "start": "npm run build-dev && concurrently \"npm run dev-server\" \"npm run dev-client\""
   },
   "devDependencies": {
@@ -22,6 +22,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "compression-webpack-plugin": "^1.1.11",
     "express": "^4.16.3",
+    "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "ng-annotate-loader": "^0.6.1",

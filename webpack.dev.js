@@ -3,6 +3,10 @@ const  webpack  =  require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+let fileLoaderOptions = {
+  outputPath: 'assets/'
+};
+
 module.exports  =  {
    entry:  {
     app:  path.join(__dirname,  './src/app.module.js'),
@@ -14,14 +18,16 @@ module.exports  =  {
   },
   module:  {
     rules:  [
-      {  test:  /\.js$/,  loader:  'babel-loader',  exclude:  /node_modules/  },
-      {  test:  /\.pug$/,  loaders:  ['html-loader',  'pug-html-loader'] },
-      {  test:  /\.sass$/,  loaders:  ['style-loader',  'css-loader',  'sass-loader'] }
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.pug$/, loaders: ['html-loader', 'pug-html-loader'] },
+      { test: /\.sass$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+      { test: /\.(?!(js|sass|pug)$)([^.]+$)/, exclude: /node_modules/, loader: 'file-loader', options: fileLoaderOptions }
     ]
   },
   mode:  'none',
   devtool:  'source-map',
   devServer: {
+    contentBase: path.join(__dirname, "dist"),
     historyApiFallback: true,
     hot: true,
     inline: true,
