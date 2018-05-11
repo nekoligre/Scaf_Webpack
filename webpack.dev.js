@@ -1,5 +1,7 @@
 const  path  =  require('path');
 const  webpack  =  require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports  =  {
    entry:  {
@@ -18,5 +20,30 @@ module.exports  =  {
     ]
   },
   mode:  'none',
-  devtool:  'source-map'
+  devtool:  'source-map',
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    host: 'localhost',
+    port: 3000,
+    proxy: {
+      '^/api/*': {
+        target: 'http://localhost:8080/api/',
+        secure: false
+      }
+    }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin({
+      multiStep: true
+    }),
+    new CleanWebpackPlugin(['dist'],{ verbose: true}),
+    new HtmlWebpackPlugin({
+      hash:true,
+      minify:true,
+      showErrors:true,
+      filename: 'index.html'
+    })
+  ]
 }; 

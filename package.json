@@ -7,12 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "server": "webpack-dev-server --open --port 3333 --content-base dist/",
-    "api": "nodemon ./api/server.js --exec babel-node --presets babel-preset-env",
-    "dev": "webpack --config=webpack.dev.js --watch",
-    "start": "concurrently \"npm run dev\" \"npm run server\"",
-    "build": "webpack --optimize-dedupe --optimize-occurrence-order --optimize-minimize --config=webpack.prod.js",
-    "prod": "webpack --config=webpack.prod.js --watch"
+    "dev-client": "webpack-dev-server --port 3000 --open",
+    "dev-server": "nodemon ./api/server.js localhost 8080 --ignore './src'",
+    "build-dev" : "webpack --mode=none --config=webpack.dev.js",
+    "build-prod" : "webpack --mode=production --config=webpack.prod.js",
+    "start": "npm run build-dev && concurrently \"npm run dev-server\" \"npm run dev-client\""
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

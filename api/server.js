@@ -11,11 +11,13 @@ api.use((req, res, next) => {
   next();
 });
 
-api.listen(8080, () => {
+api.set('port', 8080);
+
+api.listen(api.get('port'), () => {
   log(chalk.blue('------------------------------------------'));
   log(chalk.blue('Listening on port ') + chalk.bold.cyan(8080));
   log(chalk.blue('------------------------------------------'));
 });
 
 /** ROUTES */
-myRoute(api, '/hola', './api/fixtures/myRoute.json');
+myRoute(api, '/api/hola', './api/fixtures/myRoute.json');
