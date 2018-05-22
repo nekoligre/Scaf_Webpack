@@ -11,11 +11,11 @@ api.use((req, res, next) => {
   next();
 });
 
-api.set('port', 8080);
+api.set('port', 7000);
 
 api.listen(api.get('port'), () => {
   log(chalk.blue('------------------------------------------'));
-  log(chalk.blue('Listening on port ') + chalk.bold.cyan(8080));
+  log(chalk.blue('Listening on port ') + chalk.bold.cyan(7000));
   log(chalk.blue('------------------------------------------'));
 });
 
