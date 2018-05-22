@@ -10,7 +10,7 @@
     "client": "webpack-dev-server --mode=none --config webpack.dev.js ",
     "server": "nodemon ./api/server.js './src'",
     "build-dev": "webpack --config=webpack.dev.js",
-    "build-prod": "webpack --config=webpack.prod.js",
+    "build-prod": "webpack --mode=production --config=webpack.prod.js",
     "start": "npm run build-dev && concurrently \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
