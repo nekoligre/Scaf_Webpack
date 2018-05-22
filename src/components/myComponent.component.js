@@ -1,5 +1,7 @@
 const myComponentTemplate = require('./myComponent.template.pug');
-const myComponentCtrl = () => {};
+const myComponentCtrl = () => {
+  console.log('carga controlador!!')
+};
 
 module.exports = {
   bindings: {

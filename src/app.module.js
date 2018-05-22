@@ -1,4 +1,4 @@
 import myComponent from './components/myComponent.component';
 
-angular.module('myApp', [])
+angular.module('app', [])
   .component('myComponent', myComponent);

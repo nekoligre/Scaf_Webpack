@@ -1,7 +1,7 @@
 {
   "name": "scaf_webpack",
   "version": "0.0.0",
-  "main": "demo/index.html",
+  "main": "src/app.module.js",
   "repository": "https://github.com/nekoligre/Scaf_Webpack.git",
   "author": "Alberto Gozalez Novella <alberto.gonzalez@gft.com> Juan Pedro Martínez <juanpedro.martinez@gft.com>",
   "license": "MIT",
