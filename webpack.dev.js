@@ -3,6 +3,9 @@ const  webpack  =  require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const fileLoaderOptions = {
+  outputPath: 'assets/'
+};
 
 module.exports  =  {
   entry:  {
@@ -16,7 +19,8 @@ module.exports  =  {
     rules:  [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.pug$/, loaders: ['html-loader', 'pug-html-loader'] },
-      { test: /\.sass$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] }
+      { test: /\.sass$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+      { test: /\.(?!(js|sass|pug|html)$)([^.]+$)/, exclude: /node_modules/, loader: 'file-loader', options: fileLoaderOptions }
     ]
   },
   plugins: [
